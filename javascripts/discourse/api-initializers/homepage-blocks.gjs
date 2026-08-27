@@ -5,6 +5,7 @@ import BlockFeaturedList from "../blocks/block-featured-list";
 import BlockFeaturedTopics from "../blocks/block-featured-topics";
 import BlockLeaderboard from "../blocks/block-leaderboard";
 import BlockUpcomingEvents from "../blocks/block-upcoming-events";
+import BlockUserBadge from "../blocks/block-user-badge";
 
 export default apiInitializer((api) => {
   api.renderBlocks("homepage-blocks", [
@@ -43,6 +44,11 @@ export default apiInitializer((api) => {
       block: BlockGroup,
       id: "homepage-right",
       children: [
+        {
+          block: BlockUserBadge,
+          id: "homepage-user-badge",
+          conditions: { type: "user", loggedIn: true },
+        },
         {
           block: BlockLeaderboard,
           id: "homepage-leaderboard",
