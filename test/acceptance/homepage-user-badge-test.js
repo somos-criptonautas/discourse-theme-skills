@@ -20,3 +20,57 @@ acceptance("Discourse Skills | homepage user badge", function (needs) {
     assert.dom(".block-user-badge__name").hasText("Alice");
   });
 });
+
+acceptance("Discourse Skills | homepage user badge tiers", function (needs) {
+  needs.user({
+    id: 1,
+    name: "Alice",
+    username: "alice",
+    avatar_template: "/user_avatar/localhost/alice/{size}/1.png",
+  });
+
+  needs.pretender((server, helper) => {
+    server.get("/user-badges/alice.json", () =>
+      helper.response({
+        badges: [{ id: 10 }, { id: 11 }, { id: 20 }],
+        user_badges: [],
+      })
+    );
+  });
+
+  needs.site({
+    groups: [
+      { id: 41, name: "tl1" },
+      { id: 42, name: "tl2" },
+    ],
+  });
+
+  let originalTiers;
+
+  needs.hooks.beforeEach(function () {
+    localStorage.clear();
+    originalTiers = settings.tiers;
+    settings.tiers = [
+      { name: "user_badge.tiers.tier_1", badge_ids: "10,11", group: [41] },
+      { name: "user_badge.tiers.tier_2", badge_ids: "20,21,22", group: [42] },
+      { name: "user_badge.tiers.tier_3", badge_ids: "", group: [] },
+    ];
+  });
+
+  needs.hooks.afterEach(function () {
+    settings.tiers = originalTiers;
+  });
+
+  test("shows progress for the first unfinished tier", async function (assert) {
+    await visit("/custom");
+
+    // Tier 1 (10, 11) is complete and collapses. Tier 2 has 20 of 20, 21, 22.
+    assert
+      .dom(".block-user-badge__progress progress")
+      .hasAttribute("value", "1");
+    assert.dom(".block-user-badge__progress progress").hasAttribute("max", "3");
+    assert
+      .dom(".block-user-badge__progress-label a")
+      .hasAttribute("href", "/g/tl2");
+  });
+});
