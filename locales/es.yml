@@ -16,8 +16,6 @@ es:
       badges_ticker_count: "Número máximo de miembros en el bloque de insignias"
       badges_ticker_badge_ids: "Mostrar solo estos IDs de insignia (vacío = todas las insignias activas)"
       badges_ticker_tiers: "Mostrar solo insignias de estos tipos (vacío = todos)"
-      tier_cache_ttl: "Duración (en minutos) durante la que las insignias conseguidas se guardan en caché en el navegador. Reduce la carga del servidor al evitar volver a pedirlas en cada recarga de página. (Por defecto: 10)"
-      tiers: "Conjuntos de insignias que componen cada nivel. `name` es una clave de traducción del tema bajo `user_badge.tiers`, `badge_ids` es una lista de ids de insignia separados por comas y `group` es el grupo que desbloquea el nivel, elegido entre los grupos de este sitio. Un nivel solo se considera completo cuando se han conseguido todas las insignias de su lista; las filas se evalúan de arriba abajo."
   hero:
     title: "Construyamos algo grande juntos"
     subtitle: "Una comunidad de gente que crea, piensa y hace. Pregunta, comparte ideas y sube de nivel."
@@ -45,12 +43,6 @@ es:
       button_label: "Ver todas las insignias"
   category_banner:
     fallback_description: "Explora los temas de esta categoría"
-  user_badge:
-    karma: "Karma"
-    tiers:
-      tier_1: "Nivel 1"
-      tier_2: "Nivel 2"
-      tier_3: "Nivel 3"
   sidebar:
     home_link: "Inicio"
     category_topics:
