@@ -29,20 +29,15 @@ The repo itself is a full Discourse theme that demonstrates blocks in practice. 
 
 ### Installation
 
-1. Upload repository root (`discourse-theme-skills`) in **Admin > Customize >
-   Themes**.
-2. Activate **Discourse Skills** as active site theme.
-3. Set site setting `homepage` to `custom` in **Admin > Settings > Basic**.
-4. Open `/` or `/custom` while signed in. Signed-in users show default
-   Discourse avatar badge in top-right header and homepage right column.
+1. Upload the repository root in **Admin > Customize > Themes**.
+2. Activate **Discourse Skills** as the site theme.
+3. Set the `homepage` site setting to `custom`.
 
-`/custom` is direct custom-homepage route. With `homepage=custom`, Discourse
-serves same page from `/`.
-
-`discourse-redditish-theme/` is a separate theme repository included for
-reference. Do not upload it as a component of this theme. Homepage badge uses
-same current-user avatar pattern; header avatar remains provided by Discourse
-core.
+This fork tracks upstream and adds only a Spanish translation
+(`locales/es.yml`). The forum's own blocks live in
+[discourse-branded-homepage-nautas](https://github.com/somos-criptonautas/discourse-branded-homepage-nautas)
+and
+[discourse-user-tier-badge-nautas](https://github.com/somos-criptonautas/discourse-user-tier-badge-nautas).
 
 ### Settings
 
