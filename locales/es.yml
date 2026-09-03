@@ -12,6 +12,10 @@ es:
       sidebar_tags_count: "Número de etiquetas que se muestran en la barra lateral"
       banner_categories: "Categorías que muestran un banner"
       cta_link: "URL del botón de llamada a la acción"
+      badges_ticker_location: "Dónde se muestra en la portada el bloque de insignias conseguidas recientemente"
+      badges_ticker_count: "Número máximo de miembros en el bloque de insignias"
+      badges_ticker_badge_ids: "Mostrar solo estos IDs de insignia (vacío = todas las insignias activas)"
+      badges_ticker_tiers: "Mostrar solo insignias de estos tipos (vacío = todos)"
       tier_cache_ttl: "Duración (en minutos) durante la que las insignias conseguidas se guardan en caché en el navegador. Reduce la carga del servidor al evitar volver a pedirlas en cada recarga de página. (Por defecto: 10)"
       tiers: "Conjuntos de insignias que componen cada nivel. `name` es una clave de traducción del tema bajo `user_badge.tiers`, `badge_ids` es una lista de ids de insignia separados por comas y `group` es el grupo que desbloquea el nivel, elegido entre los grupos de este sitio. Un nivel solo se considera completo cuando se han conseguido todas las insignias de su lista; las filas se evalúan de arriba abajo."
   hero:
@@ -36,6 +40,9 @@ es:
       title: "¿Listo para unirte a la conversación?"
       description: "Crea una cuenta para preguntar, compartir lo que sabes y conectar con la comunidad."
       button_label: "Regístrate ahora"
+    badges_ticker:
+      title: "Conseguidas recientemente"
+      button_label: "Ver todas las insignias"
   category_banner:
     fallback_description: "Explora los temas de esta categoría"
   user_badge:
@@ -50,3 +57,6 @@ es:
       title: "Tendencias en la categoría"
     top_tags:
       title: "Etiquetas populares"
+  badges_ticker:
+    previous: "Desplazar hacia atrás"
+    next: "Desplazar hacia delante"

@@ -1,11 +1,20 @@
 import BlockGroup from "discourse/blocks/builtin/block-group";
 import { apiInitializer } from "discourse/lib/api";
+import BlockBadgesTicker from "../blocks/block-badges-ticker";
 import BlockCta from "../blocks/block-cta";
 import BlockFeaturedList from "../blocks/block-featured-list";
 import BlockFeaturedTopics from "../blocks/block-featured-topics";
 import BlockLeaderboard from "../blocks/block-leaderboard";
 import BlockUpcomingEvents from "../blocks/block-upcoming-events";
 import BlockUserBadge from "../blocks/block-user-badge";
+
+function idList(value) {
+  return value ? String(value).split("|").map(Number).filter(Boolean) : [];
+}
+
+function settingList(value) {
+  return value ? String(value).split("|") : [];
+}
 
 export default apiInitializer((api) => {
   api.renderBlocks("homepage-blocks", [
@@ -28,6 +37,24 @@ export default apiInitializer((api) => {
           enabled: true,
         },
       ],
+    },
+    {
+      block: BlockBadgesTicker,
+      id: "badges-ticker",
+      args: {
+        title: "homepage.badges_ticker.title",
+        buttonLabel: "homepage.badges_ticker.button_label",
+        variant: "ticker",
+        count: settings.badges_ticker_count,
+        badgeIds: idList(settings.badges_ticker_badge_ids),
+        tiers: settingList(settings.badges_ticker_tiers),
+      },
+      conditions: {
+        type: "setting",
+        source: settings,
+        name: "badges_ticker_location",
+        equals: "main",
+      },
     },
     {
       block: BlockFeaturedList,
@@ -77,6 +104,24 @@ export default apiInitializer((api) => {
             type: "setting",
             name: "calendar_enabled",
             enabled: true,
+          },
+        },
+        {
+          block: BlockBadgesTicker,
+          id: "homepage-badges",
+          args: {
+            title: "homepage.badges_ticker.title",
+            buttonLabel: "homepage.badges_ticker.button_label",
+            variant: "rows",
+            count: settings.badges_ticker_count,
+            badgeIds: idList(settings.badges_ticker_badge_ids),
+            tiers: settingList(settings.badges_ticker_tiers),
+          },
+          conditions: {
+            type: "setting",
+            source: settings,
+            name: "badges_ticker_location",
+            equals: "sidebar",
           },
         },
       ],

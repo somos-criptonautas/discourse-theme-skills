@@ -14,6 +14,10 @@ en:
       cta_link: "URL for the call-to-action button"
       tier_cache_ttl: "The duration (in minutes) for which earned badges are cached in the browser. Reduces server load by preventing re-fetching on every page refresh. (Default: 10)"
       tiers: "Badge sets that make up each tier. `name` is a theme locale key under `user_badge.tiers`, `badge_ids` is a comma-separated list of badge ids, `group` is the group unlocked by the tier, picked from the groups on this site. A tier counts as complete only when every badge in its list is earned; rows are evaluated top to bottom."
+      badges_ticker_location: "Where the recently earned badges block renders on the homepage"
+      badges_ticker_count: "Maximum number of members in the badges block"
+      badges_ticker_badge_ids: "Only feature these badge IDs (empty = all enabled badges)"
+      badges_ticker_tiers: "Only feature badges of these tiers (empty = all tiers)"
   hero:
     title: "Build something great together"
     subtitle: "A community for makers, thinkers, and doers. Ask questions, share ideas, and level up."
@@ -36,6 +40,9 @@ en:
       title: "Ready to join the conversation?"
       description: "Create an account to ask questions, share what you know, and connect with the community."
       button_label: "Sign up now"
+    badges_ticker:
+      title: "Recently earned"
+      button_label: "See all badges"
   category_banner:
     fallback_description: "Explore topics in this category"
   user_badge:
@@ -50,3 +57,6 @@ en:
       title: "Trending in category"
     top_tags:
       title: "Popular tags"
+  badges_ticker:
+    previous: "Scroll back"
+    next: "Scroll forward"

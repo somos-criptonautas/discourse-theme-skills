@@ -85,3 +85,30 @@ tiers:
         type: groups
         min: 0
         max: 1
+
+badges_ticker_location:
+  default: "sidebar"
+  type: enum
+  choices:
+    - main
+    - sidebar
+    - none
+
+badges_ticker_count:
+  default: 6
+  type: integer
+  min: 1
+  max: 50
+
+badges_ticker_badge_ids:
+  type: list
+  default: ""
+
+badges_ticker_tiers:
+  type: list
+  list_type: compact
+  default: ""
+  choices:
+    - gold
+    - silver
+    - bronze
