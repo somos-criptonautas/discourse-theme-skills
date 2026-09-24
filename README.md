@@ -35,7 +35,7 @@ The repo itself is a full Discourse theme that demonstrates blocks in practice. 
 
 This fork tracks upstream and adds only a Spanish translation
 (`locales/es.yml`). The forum's own blocks live in
-[discourse-branded-homepage-nautas](https://github.com/somos-criptonautas/discourse-branded-homepage-nautas)
+[discourse-custom-home-nautas](https://github.com/somos-criptonautas/discourse-custom-home-nautas)
 and
 [discourse-user-tier-badge-nautas](https://github.com/somos-criptonautas/discourse-user-tier-badge-nautas).
 
