@@ -1,7 +1,7 @@
 {
-  "name": "Discourse Skills",
+  "name": "Discourse Skills Nautas",
   "component": false,
-  "authors": "Discourse",
+  "authors": "Discourse — Forked by Criptonautas",
   "about_url": "TODO: Put your theme's public repo or Meta topic URL here",
   "license_url": "TODO: Put your theme's LICENSE URL here",
   "learn_more": "TODO",
@@ -12,7 +12,12 @@
   "modifiers": {
     "custom_homepage": true,
     "serialize_topic_excerpts": true,
-    "svg_icons": ["far-lightbulb", "far-gem", "far-calendar", "trophy"]
+    "svg_icons": [
+      "far-lightbulb",
+      "far-gem",
+      "far-calendar",
+      "trophy"
+    ]
   },
   "color_schemes": {
     "Skills Light": {

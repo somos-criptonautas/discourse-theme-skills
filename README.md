@@ -1,5 +1,7 @@
 # Discourse Theme Skills
 
+**ENGLISH** | [ESPAÑOL](README.es.md)
+
 Claude Code skills for Discourse theme and block component development, bundled with a reference theme that demonstrates the blocks system end-to-end.
 
 ## Skills
@@ -61,3 +63,9 @@ Some blocks only appear when their dependencies are met:
 - **Featured topics** requires tagging to be enabled and `featured_topics_tag` to be set
 - **Leaderboard** requires the [Gamification](https://meta.discourse.org/t/discourse-gamification/218program) plugin enabled
 - **Upcoming events** requires the [Events](https://meta.discourse.org/t/discourse-post-event/149937) plugin enabled and actual events
+
+## License
+
+MIT (upstream: Civilized Discourse Construction Kit, Inc.). Modifications © 2026 Criptonautas. See [LICENSE](LICENSE).
+
+Text of this README under [CC BY-NC-SA 4.0](CC-BY-NC-SA-4.0.txt).
