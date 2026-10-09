@@ -2,6 +2,8 @@
 
 **ENGLISH** | [ESPAÑOL](README.es.md)
 
+Maintained by Criptonautas. Not affiliated with or endorsed by Discourse (Civilized Discourse Construction Kit, Inc.).
+
 Claude Code skills for Discourse theme and block component development, bundled with a reference theme that demonstrates the blocks system end-to-end.
 
 ## Skills
