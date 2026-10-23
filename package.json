@@ -3,7 +3,7 @@
   "devDependencies": {
     "@discourse/lint-configs": "2.43.0",
     "@glint/ember-tsc": "1.1.1",
-    "concurrently": "^9.2.1",
+    "concurrently": "^9.2.5",
     "discourse": "npm:@discourse/types@2026.3.0-887c5be4",
     "ember-template-lint": "7.9.3",
     "eslint": "9.39.2",
